@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do</title>
+
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <div class="container my-3">
+        <h1>My To-Do List</h1>
+        <div class="d-flex">
+            <input class="form-control w-75 me-3" type="text" placeholder="New item" />
+            <button id="add" class="btn btn-primary">Add</button>
+        </div>
+        <ol class="list-group mt-3" id="mylist"></ol>
+
+
+
+        <div id="box" class="mb-3"></div>
+        <button id="toggleBtn" class="btn btn-warning" type="button">Toggle Box</button>
+    </div>
+    <div class="container px-5">
+        <h1 class="mb-3">Drowpdown</h1>
+
+        <div class="menu position-relative">
+            <div id="item" class="btn btn-primary">Drop-Down</div>
+            <div id="submenu" class="d-flex flex-column p-3 bg-danger w-25">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- js bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            // $('#add').on('click', () => {
+            //     let val = $('input').val();
+            //     let li = $('<li></li>').html(`${val} <button id="demoBtn" onclick = "demo(this)" class="btn btn-danger float-end">X</button>`);
+            //     li.addClass('list-group-item');
+            //     $('#mylist').append(li);
+            // })
+
+            // $('#toggleBtn').on('click', () => {
+            //     $('#box').animate({
+            //         width: "+=150",
+            //         height: "+=150",
+            //         'backGroundColor': 'green',
+            //     }, 500);
+            // });
+
+
+            $('#item').on('click', function () {
+                $('#submenu').slideToggle(1000);
+            });
+
+        });
+        function demo(e) {
+            $(e).parent().remove();
+        }
+    </script>
+</body>
+
+</html>

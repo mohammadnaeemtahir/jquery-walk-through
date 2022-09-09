@@ -1,3 +1,37 @@
-.bg-demo{
+.bg-demo {
     background-color: aquamarine;
+}
+
+.bg-demo-2 {
+    background-color: rgb(136, 127, 255);
+}
+
+.p-demo {
+    padding: 25px;
+}
+
+.b-radius {
+    border-radius: 10px;
+}
+
+/* navbar */
+
+.nav {
+    height: 100vh;
+}
+
+
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+/* box */
+
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
 }
